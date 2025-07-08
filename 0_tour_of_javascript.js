@@ -1,3 +1,4 @@
+
 Reminder: Javascript and C++ has lot of similarities
 C-style syntax:
 Both code structures are almost the same for writing conditional(if, else), loop(for, while, do-while), closing with ;  etc.
@@ -8,11 +9,11 @@ Operators:
 Arithmetic operators: +,-,*,/,==,!=,++,--
 Bitwise or Logical operators: &,|,^,~,<<,>>
 Ternary Operator:
- Both use condition ? true : false.
+Both use condition ? true : false.
 Boolean Logic:
- Both treat values like 0, null/nullptr,true,false
+Both treat values like 0, null/nullptr,true,false
 Comments:
- Same syntax: // (single line), /* ... */ (multi-line).
+Same syntax: // (single line), /* ... */ (multi-line).
 Standard Input/Output (with differences):
 C++: cin, cout
 JS: prompt, console.log() [for browser]; readline, process.stdout [For Node.js]
@@ -261,6 +262,12 @@ console.log(fun(3, 4)); // output: 12
 
 
 
+/// In this function we can pass any number of argument
+function fun(...x) { // it's gives an array of parameter
+    return x[0]+x[2]; // return the sum of first and 3rd element
+}
+console.log(fun(2,1,3,1,11)); // passing arbitory number of argument
+
 
 /// Note one more thing
 function fun(a, b) { // here, a and b are parameter
@@ -478,7 +485,6 @@ const mobiles = [
 ]
 console.log(cheapMobileName(mobiles)); // output: Huewei
 console.log(BlackColorMobileName(mobiles));
-
 
 
 
