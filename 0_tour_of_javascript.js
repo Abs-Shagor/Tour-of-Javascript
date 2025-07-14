@@ -80,6 +80,11 @@ Js array support: push, pop,  shift, unshift
 for insert and delete elements from back: push(x) , pop() 
 from beginning: unshift(x),   shift()
 
+Also we can use destructure to access array value
+let nums = [3,2,5];
+const [a, b, c] = nums;
+console.log(b); // output: 2
+
 
 String
 
@@ -88,6 +93,17 @@ In js string is immutable. That means we cannot change the character of the orig
 let str = "hello";
 str[0] = "H";
 console.log(str); // "hello" — not changed
+
+// Template Literal ` `
+const a = 2, b = 3;
+const result = 'The sum of '+a+' and '+b+' is '+(a+b); // Normal way
+const result1 = `The sum of ${a} and ${b} is ${a+b}`; //  dynamic way by using backtick(``);
+const result3 = `
+    Hello! Shagor.
+    Whats up?
+`
+console.log(result3);
+
 
 Object
 
@@ -107,10 +123,13 @@ const person = {
 console.log(person); // output: whole object
 console.log(person.Name); // output: Abs Shagor
 console.log(person['Name']); // output: Abs Shagor
-
-
 const x = 'Name' ;
 console.log(person[x]); // output: Abs Shagor
+
+// using Destructore we can use the object key as a variable directly
+const {Name,Id, Height, Parents, Parents_Age, School, CollegeName} = person;
+console.log(Id); // 211056
+
 
 
 const arr1 = Object.values(person); // this will store all the values of person object in arr1
@@ -141,6 +160,12 @@ for(const x in person) {
 console.log(x) ;  /// output all keys
 console.log(person[x] ) ;  /// output all values
 }
+/// another way to access keys and values
+const keys = Object.keys(person2);
+const values = Object.values(person2);
+console.log(keys);
+console.log(values);
+
 
 
 /// To create object we can also use
@@ -244,6 +269,12 @@ function fun(name = "shagor") {
 }
 fun(); // output: Abs shagor
 
+function fun(a, b, c=0) {
+    return a+b+c;
+}
+console.log(fun(2,3)); // output: 5
+console.log(fun(2,3,4)); // output: 9
+
 
 
 
@@ -267,6 +298,18 @@ function fun(...x) { // it's gives an array of parameter
     return x[0]+x[2]; // return the sum of first and 3rd element
 }
 console.log(fun(2,1,3,1,11)); // passing arbitory number of argument
+
+
+/// map in arrays is a method that creates a new array by applying a function to each element of the original array.
+nums = [3,2,1,5,10];
+function fun (x) {
+    return 2*x;
+}
+const ans = nums.map(fun);
+console.log(ans);
+// we can use it more dynamically by using arrow function
+const ans2 = nums.map(x => x*2);
+console.log(ans2);
 
 
 /// Note one more thing
