@@ -34,3 +34,13 @@ console.log(players_height.find(x => (x<10)));
 let arr = [2,4,1,7];
 const ans3 = arr.reduce((total, current) => (total+current), 0); // here, 0 is the initial value of total
 console.log(ans3);
+
+
+/// callback function: when we pass a function as a parameter in a function is called callback function
+function fun4(fun5) {
+    fun5();
+}
+function fun5() {
+    console.log("Hello. I am callback function");
+}
+fun4(fun5);

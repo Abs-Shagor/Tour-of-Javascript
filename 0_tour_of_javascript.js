@@ -350,8 +350,8 @@ Pass-by-Value and Pass-by-Reference
 pass by value mean: just pass the value in the function this will not change the original variable value.
 pass by reference mean: it will change the value of the original variable in C++ we use & to pass the value as reference[it's support:int,string,char,vector,array etc]. like this  void fun(int &a, int &b) { } 
 But in javascript we can pass: 
-number, string, boolean → passed by value 
-Objects & arrays → passed by reference
+primitive type(ex. number, string, boolean) → passed by value 
+Non-primitive type(ex. Objects & arrays) → passed by reference
 
 
 
