@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing JS</title>
+</head>
+
+<body>
+    <h1>How the Javascript code execute???</h1>
+
+    <button id="btn-1-id"> Click me to run the js code</button>
+
+
+    <script>
+        document.getElementById('btn-1-id').addEventListener('click', function() {
+            function fun() {
+                console.log('Hello this is me. function:)')
+            }
+
+            console.log(1)
+            setTimeout(() => {
+                console.log('Hello Shagor');
+            }, 3000);
+            console.log(2);
+            fun();
+            console.log(3)
+            setTimeout(() => {
+                console.log('Hi. Joy');
+            }, 2000);
+            console.log(4)
+        })
+    </script>
+
+</body>
+
+</html>

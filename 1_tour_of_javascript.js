@@ -1,4 +1,7 @@
 
+JavaScript is a JIT(Just-In-Time) compiled / proto-typed based / interprated Programming Language.
+
+
 Reminder: Javascript and C++ has lot of similarities
 C-style syntax:
 Both code structures are almost the same for writing conditional(if, else), loop(for, while, do-while), closing with ;  etc.
@@ -288,9 +291,17 @@ console.log(fun(10, 3)); // output: 7
 
 
 /// Arrow function
-const fun = (a, b) => a * b;
-console.log(fun(3, 4)); // output: 12
+const fun = () => console.log('Hello world!');
+fun();
 
+const fun1 = (a, b)=> a+b;
+console.log(fun1(2,3));
+
+const fun2 = (a, b) => {
+    const x = a-b;
+    return x;
+}
+console.log(fun2(7,3)); 
 
 
 /// In this function we can pass any number of argument

@@ -12,6 +12,10 @@ const ans = nums.map(fun);
 console.log(ans);
 const ans2 = nums.map(x => x*2); // we can use it more dynamically by using arrow function
 console.log(ans2);
+const nums1 = nums.map(x => { // for multiline we can use it
+      return x*x;
+})
+console.log(nums1);
 
 /// forEach is an array method that executes a function once for each element.
 const numbers = [1, 2, 3];
@@ -44,3 +48,24 @@ function fun5() {
     console.log("Hello. I am callback function");
 }
 fun4(fun5);
+// below also a callback function.
+document.getElementById('id1').addEventListener('click', function() { 
+    console.log('Hello');
+})
+
+
+/// setTimeout, setInterval
+setTimeout(()=>{console.log('Ok')},3000); // after 3 second this will print OK.
+setInterval(() => { // in every 2 second this will print shagor until we stop it
+    console.log('shagor');
+}, 2000);
+
+
+/// when we know there can be error, we can use try and catch to execute our code
+try{
+// write ur code here
+}
+catch(error) {
+    console.log('kicho ekta bhul hoiche', error);
+}
+
