@@ -541,7 +541,46 @@ console.log(cheapMobileName(mobiles)); // output: Huewei
 console.log(BlackColorMobileName(mobiles));
 
 
+/* Summary of JavaScript */
 
+1. variable declaration using: var, let, const 
+2. conditions: >, <, <=, >=, ==, ===, !==, &&, ||, if else
+3. Loop: for,  for of, for in, while, do while
+4. array: const nums = [2, 1, 4]	
+5. Object: const obj = {name: ‘shagor’, age: 26, marks: [85, 90,92,75] }; 
+6. function: function fun(....) {.....}
 
+Some stuff from ES6
+    Const name = ‘shagor’, age = 26;
+7. Template string:  const str = `My name is  ${name} and I am ${age} years old  `
+8. Arrow function: const sum = (a, b) => a+b;	const sum = (a, b) => { return a+b }
+9. Spread operator: const nums = [2,1,3]	   (Q. make a copy of nums and add 77 to the new array).
+			const nums2 = [...nums, 77]
+10. map, forEach, filter, find of Array
+11. Array/ object destructuring: (destructing mean assign name to elements of the array or object).
+const nums = [2, 1, 3]	
+const [x, y, z] = [2, 1, 3]
+Note: for array serial is matter, thats means 2 assign to x, 1 assign to y and 3 will assign to z.
+But for object serial is not matter.
+	const student= {
+		name: ‘shagor’,
+		age: 26,
+		height: 5.6,
+		marks: [80, 92, 77, 98]
+	}
+const {name, marks} = student;
+Here, the shagor will assign to name and the array will assign to marks automatically.
+
+12. JSON: JSON.stringify(...),	JSON.parse(...)
+13. fetch: fetch(‘url’).then(response => response.JSON()).then(data => {....})
+14. Keys and values: we can find all the keys and values of object by simple tricks
+	const all_keys = Object.keys(student)
+	const all_values = Object.values(student)
+15. for of: use for array
+16. for in: use for object
+17. Truthy: ‘xyz’, -x, +x, true, [...], {...}
+18. Falsy: ‘’, 0, false, null, undefined
+19. Ternary operator: (name===’shagor’) ? console.log(‘Yes’) : console.log(‘No’)
+20. Local storage and session storage: localStorage.setItem(key, value)   localStorage.getItem(key)
 
 

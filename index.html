@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testing JS</title>
+
+
+    <!-- DaisyUI x Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- connect Fontawesome -->
+    <script src="https://kit.fontawesome.com/f00281792d.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -13,8 +22,27 @@
     <button id="btn-1-id"> Click me to run the js code</button>
 
 
+
+    <!-- intersection observer learning -->
+    <section class="mt-15">
+
+
+        <h1 class="text-2xl font-bold text-center my-10"> Learning Intersection Observer</h1>
+
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-100">Div - 1</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-200">Div - 2</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-300">Div - 3</div>
+        <div id="div-4-id" class="h-[200px] w-[400px] mb-10 bg-green-400">Div - 4</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-500">Div - 5</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-600">Div - 6</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-700">Div - 7</div>
+        <div id="" class="h-[200px] w-[400px] mb-10 bg-green-800">Div - 8</div>
+
+    </section>
+
+
     <script>
-        document.getElementById('btn-1-id').addEventListener('click', function() {
+        document.getElementById('btn-1-id').addEventListener('click', function () {
             function fun() {
                 console.log('Hello this is me. function:)')
             }
@@ -31,6 +59,32 @@
             }, 2000);
             console.log(4)
         })
+
+
+        /* intersection observer */
+        const div4 = document.getElementById('div-4-id');
+        const msg = "Hello! Myself Mohammad Abu Bakkar Siddik. I am from Chittagong , Bangladesh";
+        let i = 0;
+        function typeText() {
+            if (i < msg.length) {
+                div4.innerHTML += msg[i];
+                ++i;
+                setTimeout(typeText, 100); // speed
+            }
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Yes. div 4 is arrived!');
+
+                    typeText();
+                    observer.disconnect();
+                }
+            });
+        })
+
+        observer.observe(div4);
     </script>
 
 </body>
