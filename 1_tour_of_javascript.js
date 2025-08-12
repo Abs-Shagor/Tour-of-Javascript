@@ -1,8 +1,8 @@
 
-JavaScript is a JIT(Just-In-Time) compiled / proto-typed based / interprated Programming Language.
+/// JavaScript is a JIT(Just-In-Time) compiled / proto-typed based / interprated Programming Language.
 
 
-Reminder: Javascript and C++ has lot of similarities
+/// Reminder: Javascript and C++ has lot of similarities
 C-style syntax:
 Both code structures are almost the same for writing conditional(if, else), loop(for, while, do-while), closing with ;  etc.
 Constants and Variables:
@@ -22,10 +22,10 @@ C++: cin, cout
 JS: prompt, console.log() [for browser]; readline, process.stdout [For Node.js]
 
 
-SOME DIFFERENCE’s & EXTRA STUFF
 
-Variable
+/// SOME DIFFERENCE’s & EXTRA STUFF
 
+/// Variable
 We know that js supports the variable var, let, const.
 Here, var is function-scoped and let, const are blocked-scoped.
 
@@ -46,8 +46,10 @@ function fun() {
     console.log(x);
 }
 fun()  // output: x is not defined
-Operator
 
+
+
+/// Operator
 In js == just compare the value it doesn't care about the type of the variable. For example:
 if(12=='12') {
     console.log('Hello');
@@ -68,13 +70,13 @@ Output: Hi
 
 So, to compare something genuinely we always used ===
 
-Array
 
+
+/// Array
 const nums1 = [3, 1, 70,2];
 const nums2 = [2.1, 0.5, 21.2];
 const str = ['sagor',  'joy' ] ;
 const mixed = [5, 'sagor', 0.5] ;
-
 
 console. log(nums1.length);   // output: 4
 console.log(nums2[0]);   // output: 2.1
@@ -89,8 +91,8 @@ const [a, b, c] = nums;
 console.log(b); // output: 2
 
 
-String
 
+/// String
 In js string is immutable. That means we cannot change the character of the original string.
 
 let str = "hello";
@@ -108,11 +110,11 @@ const result3 = `
 console.log(result3);
 
 
-Object
 
+/// Object
 In JavaScript, an object is a collection of key-value pairs used to store related data and functionality. It is defined by {key1:value1,  key2:value2,....... }
 
-/// simple object
+// simple object
 const person = {
     Name: 'Abs shagor',
     Id: 211056,
@@ -132,8 +134,6 @@ console.log(person[x]); // output: Abs Shagor
 // using Destructore we can use the object key as a variable directly
 const {Name,Id, Height, Parents, Parents_Age, School, CollegeName} = person;
 console.log(Id); // 211056
-
-
 
 const arr1 = Object.values(person); // this will store all the values of person object in arr1
 const arr2 = Object.keys(person); // all keys in arr2
@@ -157,41 +157,34 @@ Education: {
 console.log(person2.Education.School) // output: MHS
 console.log(person2.Education['School']) // output: MHS
 
-
-/// Loop through object
+// Loop through object
 for(const x in person) {
 console.log(x) ;  /// output all keys
 console.log(person[x] ) ;  /// output all values
 }
-/// another way to access keys and values
+// another way to access keys and values
 const keys = Object.keys(person2);
 const values = Object.values(person2);
 console.log(keys);
 console.log(values);
 
-
-
-/// To create object we can also use
+// To create object we can also use
 const person3 = Object.create({Name:'shagor', age:26})
 console.log(person3); // output: {} bcz Name & age are on the prototype, not as direct properties.
 console.log(person3.Name); // output: shagor
 
 
 
-Loop
-
+///Loop
 const nums = [3, 2, 1, 21, 7];
-
 
 for(const x of nums) {
  console. log (x) ;
 }
 
-
 for(let i=0; i<20 ; i++) {
 console.log (i) ;
 }
-
 
 let i=0;
 while(i<10) {
@@ -199,25 +192,20 @@ while(i<10) {
     i++;
 }
 
-
 const j=0;
 do {
     console.log(i) ;
     j++;
 }
 while(j<20)
-
-Note: [of for loop] use for array iteration and [in for loop] use for object iteration.
-
+// Note: [of for loop] use for array iteration and [in for loop] use for object iteration.
 
 
 
-Sorting
-
+/// Sorting
 const str =['joy', 'shagor', 'Alam', 'ruma', 'sami', 'alam' ] ;
 str.sort();
 console.log(str); // Output: Alam, alam, joy, ruma, sami, shagor
-
 
 const nums =[4, 22,45,1,3,2]
 nums.sort();
@@ -228,9 +216,6 @@ console.log(nums); // Output: 1,2,22,3,4,45
 // For Ascending order=>
 nums.sort(function(a,b){return a-b}) ; // For descending just return b-a
 console.log(nums); // 1 2 3 4 22 45
-
-
-
 
 const nums2 = [3, 2, 1, 2];
 const nums3 = nums2.sort(function(a,b){return a-b}) ;
@@ -245,25 +230,20 @@ console.log(nums5); // output: 1 2 2 3
 console.log(nums6); // output: 3 2 2 1
 
 
-Function
 
-/// without parameter
+/// Function
+
+// without parameter
 function fun() {
   console.log("Hello world!");
 }
 fun(); // output: "Hello world!"
 
-
-
-
-/// with parameters
+// with parameters
 function fun(a, b) { 
   return a + b;
 }
 console.log(fun(2, 3)); // output: 5
-
-
-
 
 ///with default parameters
 function fun(name = "shagor") {
@@ -278,17 +258,11 @@ function fun(a, b, c=0) {
 console.log(fun(2,3)); // output: 5
 console.log(fun(2,3,4)); // output: 9
 
-
-
-
-/// creating a anonymous function (no name) and assigning it to a constant named fun
+// creating a anonymous function (no name) and assigning it to a constant named fun
 const fun = function (a, b) {
   return a - b;
 };
 console.log(fun(10, 3)); // output: 7
-
-
-
 
 /// Arrow function
 const fun = () => console.log('Hello world!');
@@ -303,12 +277,16 @@ const fun2 = (a, b) => {
 }
 console.log(fun2(7,3)); 
 
-
-/// In this function we can pass any number of argument
+// In this function we can pass any number of argument
 function fun(...x) { // it's gives an array of parameter
     return x[0]+x[2]; // return the sum of first and 3rd element
 }
 console.log(fun(2,1,3,1,11)); // passing arbitory number of argument
+
+// What is Callback function?
+// A callback function is a function passed as an argument to another function to be executed later.
+// for example: button.addEventListener("click", () => console.log("Clicked!"));  here the arrow function is a callback function
+
 
 
 /// map in arrays is a method that creates a new array by applying a function to each element of the original array.
@@ -322,17 +300,13 @@ console.log(ans);
 const ans2 = nums.map(x => x*2);
 console.log(ans2);
 
-
-/// Note one more thing
+// Note one more thing
 function fun(a, b) { // here, a and b are parameter
   return a - b;
 };
 console.log(fun(10, 3)); // but here, 2 and 3 are argument
 
-
-
-
-/// let’s pass different type of parameters
+// let’s pass different type of parameters
 function fun(num, nums, char, str, objct, bool) {
     if(bool==true) {
         console.log(num);
@@ -355,16 +329,12 @@ fun(7, [3,1,2], 'a', 'shagor', {name:'shagor', age:26}, true); // output: 7 3 1 
 
 
 
-
-Pass-by-Value and Pass-by-Reference
-
+/// Pass-by-Value and Pass-by-Reference
 pass by value mean: just pass the value in the function this will not change the original variable value.
 pass by reference mean: it will change the value of the original variable in C++ we use & to pass the value as reference[it's support:int,string,char,vector,array etc]. like this  void fun(int &a, int &b) { } 
 But in javascript we can pass: 
 primitive type(ex. number, string, boolean) → passed by value 
 Non-primitive type(ex. Objects & arrays) → passed by reference
-
-
 
 //In this code a and b are not swapped bcz js passes value in function(like c++) which we say pass by value.
 function fun(a,b) {
@@ -377,8 +347,8 @@ fun(a,b);
 console.log(a); // output: 2
 
 
-Necessary in-build function
 
+/// Necessary in-build function
 typeof x → To see the type of x variable
 toFixed() →  To set decimal after dot in Float number
 parseInt(), parseFloat()  →  To convert string integer/float to number  integer/float
@@ -390,16 +360,15 @@ join(separator) → join array elements by something (e.x. ‘’ or ‘ ‘ or 
 concat() → joins strings or arrays 
 includes(value) → checks if string/array contains value
 
-Necessary function of Math object
 
+
+/// Necessary function of Math object
 console.log(Math.min(3,2,45,0,902,1));
 console.log(Math.max(3,2,45,0,902,1));
-
 
 const arr1 = [3,2,44,101,5,3,101,22,8,2];
 console.log(Math.min(...arr1)) // we cannot directly pass the arr1. we have to use spread operator ... to pass array elements
 console.log(Math.max(...arr1))
-
 
 console.log(Math.PI);
 console.log(Math.abs(-22));
@@ -410,18 +379,14 @@ console.log(Math.random()); // return a random fraction number between 0 and 1
 
 
 
-
-Necessary function of Date object
-
+/// Necessary function of Date object
 let time = new Date(); // Current date & time
 let time1 = new Date("1999-08-20"); // set Specific date
 let time2 = new Date(1999, 7, 20); // (year, monthIndex, day) → month is 0-based
 
-
 console.log(time); // output: 2025-06-28T16:56:33.604Z
 console.log(time2); // output: 1999-08-20
 console.log(time2); // output: 1999-08-20 // day can show 19 bcz of time zone(UTC)
-
 
 // Get Date Parts
 console.log(time.getFullYear()); // output: 2025
@@ -432,15 +397,12 @@ console.log(time.getHours());    // output: 23 [0-index]
 console.log(time.getMinutes());  // output: 51 [0-index]
 console.log(time.getSeconds());  // output: 18
 
-
 // set Date parts
 time.setFullYear(2030);
 time.setMonth(11);
 time.setDate(25);
 
-
 console.log(time); // output: 2030-12-25 // day can show 24 bcz of time zone(UTC)
-
 
 // Format of Date or time
 time.toDateString();     // "Sat Jun 28 2025"
@@ -450,11 +412,7 @@ time.toLocaleString();   // Local format (e.g., "6/28/2025, 5:45:12 PM")
 
 
 
-
-
-Practicing Some common problem
-
-
+/// Practicing Some common problem
 
 /* Check if the year is a Leap year or not */
 function fun1(x) {
@@ -470,9 +428,6 @@ function fun1(x) {
 }
 console.log(fun1(2023));
 console.log(fun1(2024));
-
-
-
 
 /* find all the unique element of an array */
 function fun2(arr) {
@@ -494,16 +449,10 @@ a=b;
 b=c;
 console.log(a,b); // 3 2
 
-
 /* Swap: shortcut */
 let x=2, y=3;
 [x,y] = [y,x];
 console.log(x,y); // 3 2
-
-
-
-
-
 
 /*
 Let, we have a array of object.
@@ -541,8 +490,8 @@ console.log(cheapMobileName(mobiles)); // output: Huewei
 console.log(BlackColorMobileName(mobiles));
 
 
-/* Summary of JavaScript */
 
+/// Summary of JavaScript
 1. variable declaration using: var, let, const 
 2. conditions: >, <, <=, >=, ==, ===, !==, &&, ||, if else
 3. Loop: for,  for of, for in, while, do while
@@ -550,7 +499,7 @@ console.log(BlackColorMobileName(mobiles));
 5. Object: const obj = {name: ‘shagor’, age: 26, marks: [85, 90,92,75] }; 
 6. function: function fun(....) {.....}
 
-Some stuff from ES6
+// Some stuff from ES6
     Const name = ‘shagor’, age = 26;
 7. Template string:  const str = `My name is  ${name} and I am ${age} years old  `
 8. Arrow function: const sum = (a, b) => a+b;	const sum = (a, b) => { return a+b }
@@ -582,5 +531,3 @@ Here, the shagor will assign to name and the array will assign to marks automati
 18. Falsy: ‘’, 0, false, null, undefined
 19. Ternary operator: (name===’shagor’) ? console.log(‘Yes’) : console.log(‘No’)
 20. Local storage and session storage: localStorage.setItem(key, value)   localStorage.getItem(key)
-
-
